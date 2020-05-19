@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Top Movies</title>
+    <script src="https://kit.fontawesome.com/36e17363d1.js" crossorigin="anonymous"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&display=swap');
+
+        * {
+            font-family: "DM Mono", sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-weight: 500;
+            font-size: 20px;
+            /* background-color: #24252A; */
+        }
+
+        body {
+            background-color: #24252A;
+        }
+
+        li,
+        a,
+        h1 {
+            text-decoration: none;
+            font-size: 30px;
+            list-style: none;
+            color: #edf0f1;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 10%;
+        }
+
+        li {
+            display: inline-block;
+            padding: 0px 20px;
+        }
+
+        .movie {
+            height: 70vh;
+            margin-top: 15vh;
+            margin-bottom: 15vh;
+            margin-right: 5vh;
+            margin-left: 5vh;
+            display: block;
+            background-color: white;
+            border-radius: 20px;
+            padding: 1em;
+            justify-content: center;
+            width: auto;
+            box-shadow: 0px -10px 20px -5px #E2E2E2;
+            text-align: center;
+        }
+
+        @media screen and (max-width:600px) {
+            .movie {
+                margin-top: 12vh;
+                margin-bottom: 12vh;
+            }
+        }
+
+        table,
+        tr,
+        td,
+        th {
+            position: relative;
+            margin-top: 25px;
+            margin-left: 30%;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<header>
+    <h1>Movie Recommender System</h1>
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Repo</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div class="movie">
+        <h2>Top Movies of {{genre_name}}</h2>
+        <table class="movie_table" align="center">
+            <tr>
+                <th>Movie Title</th>
+                <th>Release Year</th>
+            </tr>
+            <tbody class="table_body">
+                <tr>
+                    <td>{{ movie_names[0] }}</td>
+                    <td>{{ movie_date[0] }}</td>
+                </tr>
+                <tr>
+                    <td>{{ movie_names[1] }}</td>
+                    <td>{{ movie_date[1] }}</td>
+                </tr>
+                <tr>
+                    <td>{{ movie_names[2] }}</td>
+                    <td>{{ movie_date[2] }}</td>
+                </tr>
+                <tr>
+                    <td>{{ movie_names[3] }}</td>
+                    <td>{{ movie_date[3] }}</td>
+                </tr>
+                <tr>
+                    <td>{{ movie_names[4] }}</td>
+                    <td>{{ movie_date[4] }}</td>
+                </tr>
+                <tr>
+                    <td>{{ movie_names[5] }}</td>
+                    <td>{{ movie_date[5] }}</td>
+                </tr>
+                <tr>
+                    <td>{{ movie_names[6] }}</td>
+                    <td>{{ movie_date[6] }}</td>
+                </tr>
+                <tr>
+                    <td>{{ movie_names[7] }}</td>
+                    <td>{{ movie_date[7] }}</td>
+                </tr>
+                <tr>
+                    <td>{{ movie_names[8] }}</td>
+                    <td>{{ movie_date[8] }}</td>
+                </tr>
+                <tr>
+                    <td>{{ movie_names[9] }}</td>
+                    <td>{{ movie_date[9] }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

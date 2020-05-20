@@ -37,7 +37,14 @@ s.name = 'genre'
 gen_md = df.drop('genres', axis=1).join(s)
 
 def build_chart(genre, percentile=0.85):
-    genre=genre[0].upper()+genre[1:].lower()
+    if len(genre.split())>1:
+        genres=genre.split()
+        genre=''
+        for i in genres:
+            genre+=i[0].upper()+i[1:].lower()+' '
+        genre=genre.strip()
+    else:
+        genre=genre[0].upper()+genre[1:].lower()
     df = gen_md[gen_md['genre'] == genre]
     vote_counts = df[df['vote_count'].notnull()]['vote_count'].astype('int')
     vote_averages = df[df['vote_average'].notnull()]['vote_average'].astype('int')

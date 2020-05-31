@@ -10,7 +10,7 @@
         @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&display=swap');
 
         * {
-            font-family: "DM Mono", sans-serif;
+            font-family: "Nunito Sans", sans-serif;
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -70,29 +70,55 @@
             }
         }
 
-        table,
-        tr,
-        td,
-        th {
-            position: relative;
-            margin-top: 25px;
-            margin-left: 30%;
-            border: 1px solid black;
+        .content-table {
             border-collapse: collapse;
-        }
+            margin-left: auto;
+            margin-right: auto;
+  margin-top: 25px;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
 
-        td {
-            padding: 10px;
-        }
+.content-table th {
+  background-color: #000;
+  color: #E50914;
+  text-align: center;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #E50914;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #E50914;
+}
     </style>
 </head>
 <header>
     <img src="https://i.ibb.co/sR1T4gT/logo.png" alt="logo">
     <nav>
         <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Repo</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="https://medium.com/@harivamshididiga/movie-recommendation-engine-d24b8e5e9096">About</a></li>
+            <li><a href="https://github.com/harivamshi81189/Movie-Recommendation-System">Repo</a></li>
         </ul>
     </nav>
 </header>
@@ -101,7 +127,7 @@
     <div class="movie">
         <h2><u>Recommendations:</u></h2>
         <p>Showing results for: {{ search_name }}</p>
-        <table class="movie_table" align="center">
+        <table class="content-table" align="center">
             <tr>
                 <th>S.No.</th>
                 <th>Movie Title</th>

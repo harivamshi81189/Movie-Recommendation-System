@@ -68,6 +68,7 @@ df = df.drop([19730, 29503, 35587])
 df['id'] = df['id'].astype('int')
 
 smd = df[df['id'].isin(links_small)]
+smd=smd.drop(8603, axis=0)
 smd['tagline'] = smd['tagline'].fillna('')
 smd['description'] = smd['overview'] + smd['tagline']
 smd['description'] = smd['description'].fillna('')
